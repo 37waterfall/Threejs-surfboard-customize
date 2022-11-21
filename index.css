@@ -87,47 +87,158 @@ th {
 
 /* start */
 
+#introBtn{
+  position: fixed;
+  z-index: 1;
+  left: 0.5em;
+  top: 0.5em;
+  width: 3em;
+  height: 3em;
+
+  color: white;
+  border: 0.2em solid rgba(255,255,255,.6);
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introBtnImg{
+  width: 60%;
+  object-fit: cover;
+}
+
+.introBox{
+  position: absolute;
+  top: -100vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.8);
+  z-index: 3;
+  transition: all var(--animation-time);
+  color: white;
+  overflow: hidden;
+}
+
+.introContent {
+  width: 60vw;
+  height: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+#introCloseBtn{
+  position: absolute;
+  z-index: 4;
+  right: 1em;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.introCloseImg{
+  width: 1.2em;
+  object-fit: cover;
+}
+
+.introHeaderInfo{
+  font-size: 2em;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.introHeaderInfo::after{
+  content: '';
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  position: absolute;
+  bottom: -0.2em;
+  left: 0;
+}
+
+.introDetail{
+  font-size: 1.2em;
+  text-indent: 2em;
+  line-height: 1.6em;
+}
+.introDetail:last-child{
+  margin-bottom: 2em;
+  text-decoration: underline;
+}
+
+.introImg{
+  width: 30vw;
+  align-self: center;
+  margin: 1.2em 0;
+}
+
+.introVideo {
+  width: 30vw;
+  align-self: center;
+  margin: 1.2em 0;
+  display: none;
+}
+
 .buttonBox {
   position: fixed;
   right: 0;
   z-index: 1;
   top: 50%;
   transform: translate(0, -50%);
-  border: 2px solid white;
+  border: 0.1em solid white;
   border-right: 0;
-  width: 50px;
-  height: 100px;
-  border-radius: 50px 0 0 50px;
+  width: 2em;
+  height: 4em;
+  border-radius: 2em 0 0 2em;
   /* text-align: center; */
-  line-height: 100px;
-  text-indent: 20px;
+  line-height: 4em;
+  text-indent: 1em;
   cursor: pointer;
   color: white;
-  font-size: 32px;
+  font-size: 2em;
   transition: all var(--animation-time);
 
-  box-shadow: 0px 0px 100px #ff00008c;
+  box-shadow: 0 0 4em #ff00008c;
 
 }
 
 #customizeBtn {
-  text-shadow: 0 0 4px #ff0000;
+  text-shadow: 0 0 0.2em #ff0000;
 }
 
 .headerBox {
-  border-bottom: 2px solid red;
+  border-bottom: 0.2em solid red;
+  height: 2em;
 }
+
 
 .headerInfo {
   background: red;
   color: white;
-  padding: 2px 20px;
-  border-radius: 4px;
-  min-width: 70px;
+  padding: 0.2em 1em;
+  border-radius: 0.2em;
+  /* min-width: 5em; */
+  font-size: 1.5em;
+  line-height: 1em;
+}
+.headerImg{
+  height: 80%;
+  object-fit: cover;
+  margin-right: 0.2em;
 }
 
 .rightBox {
-  position: absolute;
+  /* 原来是absolute，手机上有问题，，改成fixed就好了。。 */
+  position: fixed;
   right: -50vw;
   width: 50vw;
   background: #fdfdfd;
@@ -136,7 +247,7 @@ th {
   padding: 20px;
   box-sizing: border-box;
   transition: all var(--animation-time);
-
+  overflow: auto;
 }
 
 .itemsBox {
@@ -145,10 +256,12 @@ th {
   margin-bottom: 20px;
 }
 
+
+
 .itemBox {
-  width: 48px;
-  min-width: 48px;
-  height: 48px;
+  width: 5em;
+  /* min-width: 5em; */
+  height: 5em;
   border: 2px solid #dedede;
   border-radius: 4px;
   box-sizing: border-box;
@@ -166,6 +279,13 @@ th {
   border: 2px solid red;
 }
 
+.surfBodys .itemBox img{
+  width: 100%;
+  object-fit: cover;
+  transform: rotate(35deg) scale(1.2);
+
+}
+
 .itemBox img {
   width: 100%;
   object-fit: cover;
@@ -173,3 +293,28 @@ th {
 }
 
 /* media */
+
+/* > 1000 */
+@media screen and (min-width: 1000px) {
+  /* itemBox */
+
+  .itemBox {
+    width: 6em;
+    height: 6em;
+  }
+}
+
+
+/* > 1200 */
+@media screen and (min-width: 1200px) {
+  /* itemBox */
+
+  .itemBox {
+    width: 7em;
+    height: 7em;
+  }
+}
+
+
+
+

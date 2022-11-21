@@ -81,6 +81,11 @@ const wheelsBox = document.querySelector(".wheelsBox");
 const surfBodys = document.querySelectorAll(".surfBodys .itemBox");
 const surfBodyMtls = document.querySelectorAll(".surfBodyMtls .itemBox");
 
+const introBtn = document.querySelector("#introBtn");
+const introBox = document.querySelector(".introBox");
+const introCloseBtn = document.querySelector("#introCloseBtn");
+const introVideo = document.querySelector(".introVideo"); // 为什么要绑定video，因为它有时候在页面中不消失。。。
+
 const audio = document.querySelector("#audio");
 
 // --------threejs content-------------------------
@@ -184,6 +189,8 @@ function handleSurfBodyMtl(gltf) {
   txt.wrapS = THREE.RepeatWrapping;
   txt.wrapT = THREE.RepeatWrapping;
 
+  txt.anisotropy = 16;
+
   // 为什么图像会反转，这里要设置 flipY 为false！！！
   // txt.rotation = Math.PI;
   txt.flipY = false;
@@ -233,6 +240,7 @@ animate();
 // -------dom event---------------------------
 
 buttonBox.addEventListener("click", () => {
+  audio.play();
   state.isCustomize = !state.isCustomize;
 
   if (state.isCustomize) {
@@ -290,7 +298,7 @@ surfBodys.forEach((item) => {
     item.classList.add("active");
 
     // 加载对应的模型。。
-
+    // 这里的e.target 是点到是谁是谁，之前img为空，点击的是li，img有内容，就是img
     state.handleSurfBodyIndex = e.target.dataset.surfbodyindex;
 
     Object.entries(theModel.surfBodys).forEach((value) => {
@@ -330,4 +338,17 @@ surfBodyMtls.forEach((item) => {
 
     handleSurfBodyMtl(theModel.surfBodys[state.handleSurfBodyIndex]);
   });
+});
+
+// introBtn
+introBtn.addEventListener("click", () => {
+  audio.play();
+  introBox.style.top = "0";
+  introVideo.style.display = "block"; //考虑兼容性。。。。
+});
+
+introCloseBtn.addEventListener("click", () => {
+  audio.play();
+  introBox.style.top = "-100vh";
+  introVideo.style.display = "none"; //考虑兼容性。。。。
 });
