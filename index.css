@@ -250,6 +250,26 @@ th {
   overflow: auto;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: none;
+background: rgba(0,0,0,.3);
+-webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+-webkit-box-shadow: none;
+border-radius: 10px;
+background: rgb(166 166 166 / 30%);
+-webkit-box-shadow: none;
+}
+
+
 .itemsBox {
   display: flex;
   flex-wrap: wrap;

@@ -116,6 +116,7 @@ function createControls() {
   controls.update();
   controls.enablePan = true;
   controls.enableDamping = true;
+  controls.maxDistance = 1;
 }
 
 function createLights() {
