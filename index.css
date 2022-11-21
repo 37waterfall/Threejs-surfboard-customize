@@ -1,0 +1,175 @@
+/* init */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 29px00;
+  font: 12px "\5B8B\4F53", sans-serif;
+  background: #ffffff;
+}
+
+body {
+  background: radial-gradient(#ffecd2, #fcb69f);
+  /* font-family: ; 运动风格*/
+  overflow: hidden;
+}
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+blockquote,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+table,
+td,
+tr,
+th {
+  font-size: 12px;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+address,
+cite,
+code,
+em,
+th {
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --animation-time: 0.5s;
+}
+
+/* start */
+
+.buttonBox {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 2px solid white;
+  border-right: 0;
+  width: 50px;
+  height: 100px;
+  border-radius: 50px 0 0 50px;
+  /* text-align: center; */
+  line-height: 100px;
+  text-indent: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 32px;
+  transition: all var(--animation-time);
+
+  box-shadow: 0px 0px 100px #ff00008c;
+
+}
+
+#customizeBtn {
+  text-shadow: 0 0 4px #ff0000;
+}
+
+.headerBox {
+  border-bottom: 2px solid red;
+}
+
+.headerInfo {
+  background: red;
+  color: white;
+  padding: 2px 20px;
+  border-radius: 4px;
+  min-width: 70px;
+}
+
+.rightBox {
+  position: absolute;
+  right: -50vw;
+  width: 50vw;
+  background: #fdfdfd;
+  height: 100vh;
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all var(--animation-time);
+
+}
+
+.itemsBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.itemBox {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  border: 2px solid #dedede;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active{
+  border: 2px solid red;
+}
+
+.itemBox img {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.5);
+}
+
+/* media */

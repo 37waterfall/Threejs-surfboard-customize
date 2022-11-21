@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>surfboard</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- 侧边栏（版型、版面、轮子颜色） + 幽灵按钮 -->
+
+    <div class="buttonBox">
+      <span class="btn" id="customizeBtn"><</span>
+    </div>
+
+    <div class="rightBox">
+      <!-- 标题 + 选项 -->
+      <div class="headerBox"><span class="headerInfo">版型</span></div>
+      <ul class="itemsBox surfBodys">
+        <li class="itemBox active" data-surfbodyindex = '1'><img src="" alt="" />1</li>
+        <li class="itemBox" data-surfbodyindex = '2'><img src="" alt="" />2</li>
+        <li class="itemBox" data-surfbodyindex = '3'><img src="" alt="" />3</li>
+        <li class="itemBox" data-surfbodyindex = '4'><img src="" alt="" />4</li>
+        <li class="itemBox" data-surfbodyindex = '5'><img src="" alt="" />5</li>
+      </ul>
+
+      <div class="headerBox"><span class="headerInfo">版面</span></div>
+      <ul class="itemsBox surfBodyMtls">
+        <li class="itemBox active"><img src="./textures/a-01.png" alt="a-01" /></li>
+        <li class="itemBox"><img src="./textures/a-02.png" alt="a-02" /></li>
+        <li class="itemBox"><img src="./textures/a-03.png" alt="a-03" /></li>
+        <li class="itemBox"><img src="./textures/a-04.png" alt="a-04" /></li>
+        <li class="itemBox"><img src="./textures/a-05.png" alt="a-05" /></li>
+        <li class="itemBox"><img src="./textures/a-06.png" alt="a-06" /></li>
+        <li class="itemBox"><img src="./textures/a-07.png" alt="a-07" /></li>
+        <li class="itemBox"><img src="./textures/a-08.png" alt="a-08" /></li>
+        <li class="itemBox"><img src="./textures/a-09.png" alt="a-09" /></li>
+        <li class="itemBox"><img src="./textures/b-01.png" alt="b-01" /></li>
+        <li class="itemBox"><img src="./textures/b-02.png" alt="b-02" /></li>
+        <li class="itemBox"><img src="./textures/b-03.png" alt="b-03" /></li>
+        <li class="itemBox"><img src="./textures/b-04.png" alt="b-04" /></li>
+        <li class="itemBox"><img src="./textures/b-05.png" alt="b-05" /></li>
+        <li class="itemBox"><img src="./textures/b-06.png" alt="b-06" /></li>
+      </ul>
+
+      <div class="headerBox"><span class="headerInfo">滑轮</span></div>
+      <ul class="itemsBox wheelsBox">
+        
+      </ul>
+    </div>
+
+    <audio id="audio" src="./audio/click.mp3"></audio>
+
+    <script src="https://unpkg.com/three@0.127.0/build/three.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
