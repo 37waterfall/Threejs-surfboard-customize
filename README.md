@@ -1,7 +1,7 @@
 # Threejs-surfboard-customize
 通过Blender建立陆地冲浪板的模型，包括版面、支架、轮子，可以通过点击的方式，切换陆冲板的外形、版面颜色、轮子颜色~
 
-![img](/imgs/001.gif "show gif")
+![img](https://i.postimg.cc/21J2GfvJ/001.gif)
 
 包含页面
 - 主场景

@@ -168,7 +168,7 @@ th {
 .introDetail{
   font-size: 1.2em;
   text-indent: 2em;
-  line-height: 1.6em;
+  line-height: 2em;
 }
 .introDetail:last-child{
   margin-bottom: 2em;
@@ -176,13 +176,13 @@ th {
 }
 
 .introImg{
-  width: 30vw;
+  width: 40vw;
   align-self: center;
   margin: 1.2em 0;
 }
 
 .introVideo {
-  width: 30vw;
+  width: 40vw;
   align-self: center;
   margin: 1.2em 0;
   display: none;
@@ -313,6 +313,17 @@ background: rgb(166 166 166 / 30%);
 }
 
 /* media */
+/* < 600 */
+@media screen and (max-width: 600px) {
+  /* itemBox */
+
+  .introImg{
+    width: 50vw;
+  }
+  .introVideo{
+    width: 50vw;
+  }
+}
 
 /* > 1000 */
 @media screen and (min-width: 1000px) {
