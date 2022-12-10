@@ -5,6 +5,9 @@
 
 let scene, camera, renderer, cube, controls;
 
+const url =
+  "https://cdn.jsdelivr.net/gh/37waterfall/Threejs-surfboard-customize@master/";
+
 const models = {
   bracket: "./models/surfboard-bracket.glb",
   wheels: "./models/surfboard-wheels.glb",
@@ -137,7 +140,7 @@ function createLights() {
 function createModels() {
   loader = new THREE.GLTFLoader();
   // bracket
-  loader.load(models.bracket, (gltf) => {
+  loader.load(url + models.bracket, (gltf) => {
     theModel.bracket = gltf.scene;
 
     console.log(gltf.scene);
@@ -145,7 +148,7 @@ function createModels() {
   });
 
   // wheels
-  loader.load(models.wheels, (gltf) => {
+  loader.load(url + models.wheels, (gltf) => {
     theModel.wheels = gltf.scene;
 
     scene.add(gltf.scene);
@@ -155,7 +158,7 @@ function createModels() {
 
   for (let [key, value] of Object.entries(models.surfboards)) {
     // 贴初始图片 - 后面点选变图案。
-    loader.load(value.surfBody, (gltf) => {
+    loader.load(url + value.surfBody, (gltf) => {
       if (!theModel.surfBodys) theModel.surfBodys = {};
       theModel.surfBodys[key] = gltf.scene;
 
@@ -171,7 +174,7 @@ function createModels() {
     });
 
     // Blender中贴的木纹
-    loader.load(value.surfSide, (gltf) => {
+    loader.load(url + value.surfSide, (gltf) => {
       if (!theModel.surfSides) theModel.surfSides = {};
       theModel.surfSides[key] = gltf.scene;
 
